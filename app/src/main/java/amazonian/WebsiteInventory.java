@@ -1,17 +1,27 @@
 package amazonian;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+// import java.util.HashMap;
 
 public class WebsiteInventory {
 
-  private HashMap<Product, Integer> items = new HashMap<Product, Integer>();
+  private ArrayList<Product> items = new ArrayList<Product>();
 
 
-  public void addProduct(Product item, int quantity){
-    this.items.put(item, quantity);
+  public void addProduct(Product item){
+    this.items.add(item);
   }
 
-  public HashMap<Product, Integer> viewProducts(){
+public Product removeProduct(int ID){
+for(int i = 0; i < items.size(); i++){
+if(items.get(i).getId() == ID){
+return  items.remove(i);
+}
+}
+return null;
+}
+
+  public ArrayList<Product> viewProducts(){
     return this.items;
   }
 
