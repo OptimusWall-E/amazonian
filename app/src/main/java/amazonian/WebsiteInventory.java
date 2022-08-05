@@ -1,7 +1,6 @@
 package amazonian;
 
 import java.util.ArrayList;
-// import java.util.HashMap;
 
 public class WebsiteInventory {
 
@@ -12,14 +11,14 @@ public class WebsiteInventory {
     this.items.add(item);
   }
 
-public Product removeProduct(int ID){
-for(int i = 0; i < items.size(); i++){
-if(items.get(i).getId() == ID){
-return  items.remove(i);
-}
-}
-return null;
-}
+  public Product removeProduct(int ID){
+    for(int i = 0; i < items.size(); i++){
+      if(items.get(i).getId() == ID){
+        return  items.remove(i);
+      }
+    }
+    return null;
+  }
 
   public ArrayList<Product> viewProducts(){
     return this.items;

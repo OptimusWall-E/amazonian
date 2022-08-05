@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
-// import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +12,7 @@ import static org.mockito.Mockito.*;
 
 
 public class WebsiteInventoryTest {
-  @Test void items() {
+  @Test void itemsAreEmptyOnInit() {
     WebsiteInventory websiteInventory = new WebsiteInventory();
     ArrayList<Product> products = websiteInventory.viewProducts();
     assertTrue(products.isEmpty());
