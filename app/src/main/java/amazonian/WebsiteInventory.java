@@ -14,7 +14,7 @@ public class WebsiteInventory {
   public Product removeProduct(int ID){
     for(int i = 0; i < items.size(); i++){
       if(items.get(i).getId() == ID){
-        return  items.remove(i);
+        return items.remove(i);
       }
     }
     return null;
